@@ -1,0 +1,8 @@
+.logo{
+    max-width:40px;
+    max-height: 40px;
+    margin-right: 8px;
+ }
+ .nav{
+    transition: all .5s;
+ }

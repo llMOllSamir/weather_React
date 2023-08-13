@@ -1,0 +1,42 @@
+.analyes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh;
+  margin-top: 20px;
+}
+.analyes ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0 10px;
+  font-size: 16px;
+}
+
+.analyes ul li {
+  cursor: pointer;
+  color: gold;
+}
+
+.analyes ul li::after {
+  content: "|";
+  margin-left: 10px;
+  color: white;
+}
+
+.analyes ul li:first-of-type:after {
+  content: "";
+}
+
+@media all and (max-width: 600px) {
+  .analyes ul {
+    font-size: 14px;
+  }
+}
+ 
+ 

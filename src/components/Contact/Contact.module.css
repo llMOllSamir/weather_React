@@ -1,0 +1,48 @@
+.section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 255, 0.2)), url(../../images/contact.jpg);
+    background-position: center ;
+    background-size: cover;
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}   
+.textArea{
+    resize: none;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    width: 80px;
+}
+.paragraph{
+    font-weight: 600;
+    margin-inline: auto;
+    width: 90%;
+    margin-top: 20px;
+}
+@media all and (max-height:900px) and (max-width:768px) {
+    .section{
+        padding-top: 100px; 
+        padding-bottom: 100px;
+    }
+}
+@media all and (max-height:900px) {
+    .section{
+        padding-top: 100px; 
+        padding-bottom: 100px;
+    }
+}
