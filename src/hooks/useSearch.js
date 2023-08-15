@@ -6,7 +6,7 @@ export let useSearch = (onSuccess)=>{
  
 
 let fetchData = (q)=>{
-    return axios.get(`http://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${q}`).catch(err=>{})
+    return axios.get(`https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${q}`).catch(err=>{})
 }
 
     return useMutation(fetchData,{
