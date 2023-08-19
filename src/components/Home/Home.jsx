@@ -7,6 +7,7 @@ import IsLoading from "../IsLoading/IsLoading";
 import { setLastSearch } from "../../Redux/weatherSlice";
 import Canvas from "../Canvas/Canvas";
 import WeatherCard from './../WeatherCard/WeatherCard';
+import GeoLocation from "../GeoLocation/GeoLocation";
 
 export default function Home() {
   const [labelName, setlabelName] = useState(null);
@@ -64,6 +65,7 @@ export default function Home() {
           Check Connection <i className="fa-solid fa-wifi fa-beat-fade"></i>
         </h2>
       )}
+          <GeoLocation refetch={refetch}/>
       {data && (
         <React.Fragment>
           <div ref={canvas} className="container-fluid my-5">
@@ -75,6 +77,7 @@ export default function Home() {
                     {data.location.name} , {data.location.country}
                   </span>
                 </h5>
+                <h2 className="text-warning">{Math.floor(data.current.temp_c)} °C</h2>
                 <h5>
                   <span>Date : </span>
                   <span>
@@ -110,8 +113,8 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className=" col-lg-3  ">
-                <div className="row gy-2 px-5   ">
+              <div className=" col-7 col-md-7 mx-auto col-lg-3   ">
+                <div className="row gy-2 px-2   ">
                   {data.forecast.forecastday.map((ele, index) => (
                     <WeatherCard ele={ele} setdayIndex={setdayIndex} key={index} index={index}/>
                   ))}

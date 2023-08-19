@@ -43,8 +43,8 @@ export default function Footer() {
           <div className="col-md-6 text-center">
             <h2 className={styles.logo}>Contact Us</h2>
             <div className={styles.link} >
-            {links.map((ele,index)=><React.Fragment>
-              <Link target="__blank" className={ele.class}  key={index} to={ele.src}><i className={`fa-brands ${ele.link}`}></i></Link>
+            {links.map((ele,index)=><React.Fragment key={index}>
+              <Link  target="__blank" className={ele.class}  key={index} to={ele.src}><i className={`fa-brands ${ele.link}`}></i></Link>
             </React.Fragment>)}
             </div>
           </div>

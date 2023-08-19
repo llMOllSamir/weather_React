@@ -28,17 +28,16 @@ export default function WeatherCard({ index, ele, setdayIndex }) {
   return (
     <React.Fragment>
       <div
-        className="col-12"
+        className="col-12 col-xl-11 mx-auto"
         onClick={() => {
           setdayIndex(index);
         }}
       >
         <div
-          className="row h-100 alert alert-primary "
+          className="row h-100 alert alert-primary   align-items-center"
           style={{ cursor: "pointer" }}
         >
-          <div className="col-12 ">
-            <div className="row align-items-center">
+ 
               <div className="col-4  text-center">
                 <img
                   className="img-fluid "
@@ -74,8 +73,7 @@ export default function WeatherCard({ index, ele, setdayIndex }) {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+ 
       </div>
     </React.Fragment>
   );
